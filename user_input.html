@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User Input </title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    function userDetails() {
+        let tableHeadNames = ["Sr. No", " Name ", " Email ", " Contact ", " Update ", " Delete "];
+
+        let updateButton = document.createElement("button");
+        updateButton.type = "button";
+        updateButton.value ="Edit";
+
+        let updateButtonName = document.createTextNode("Edit");
+        updateButton.append(updateButtonName);
+        updateButton.className = 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded';
+
+        let deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.value ="Delete";
+        deleteButton.className = 'bg-red-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded';
+
+        let deleteButtonName = document.createTextNode("Delete");
+        deleteButton.append(deleteButtonName);
+
+        let table = document.createElement("table");
+        table.style.border="2";
+        table.style="align-center"
+        let tableRow = document.createElement("tr");
+        
+        tableHeadNames.forEach(ele => {
+            // let tableRow = document.createElement("tr");
+            let tableHead = document.createElement("th");
+            let headName = document.createTextNode(ele);
+            
+            console.log(ele);
+            tableHead.append(headName);
+            tableRow.append(tableHead);
+        });
+        table.append(tableRow);
+        
+        let tableRow1 = document.createElement("tr");
+        let tableData = document.createElement("td");
+        let tableDataSr = document.createTextNode("1");
+        tableData.append(tableDataSr);
+
+        let tableData1 = document.createElement("td");
+        let tableDataName = document.createTextNode("Satya");
+        tableData1.append(tableDataName);
+            
+        let tableData2 = document.createElement("td");
+        let tableDataEmail = document.createTextNode("auti.satyvan3@gmail.com");
+        tableData2.append(tableDataEmail);
+
+        let tableData3 = document.createElement("td");
+        let tableDataContact = document.createTextNode("8888044524");
+        tableData3.append(tableDataContact);
+
+        let tableData4 = document.createElement("td");
+        // let tableDataUpdate = document.createTextNode(updateButton);
+        tableData4.append(updateButton);
+
+        let tableData5 = document.createElement("td");
+        // let tableDataDelete = document.createTextNode(deleteButton);
+        tableData5.append(deleteButton);
+
+        tableRow1.append(tableData, tableData1, tableData2, tableData3, tableData4, tableData5)
+        
+        table.append(tableRow1);
+        document.body.append(table);
+        event.preventDefault(event);
+    }
+</script>
+<body>
+    <form method="post">
+        <div class="flex items-center mt-16 justify-center" >
+            <table class=" min-h-full ">
+                <caption class="text-xl text-blue-700 font-bold">
+                    <h2>User Details</h2>
+                </caption>
+                <tr>
+                    <td>
+                        <label class="mr-3" for="userName">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" class="placeholder-gray-400 focus:border-red-500 rounded-md  text-center p-1 px-5 focus:ring-indigo-500 border-gray-300" name="userName" id="userName" placeholder="Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="mr-3" for="eMail">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" class="p-1 px-5 focus:ring-sky-500 text-center rounded-md border-gray-300" name="eMail" id="eMail" placeholder="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="mr-3" for="contact">Contact</label>
+                    </td>
+                    <td>
+                        <input type="text" class="p-1 px-5 focus:ring-indigo-500 rounded-md text-center border-gray-300" name="contact" id="contact" placeholder="contact">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td class="pt-2">
+                        
+                        <button type="submit" onclick="userDetails()" class="bg-green-600 rounded-xl p-1 px-2 text-white hover:bg-green-700" name="submit" value="Save Details">Save Details</button>
+                        <button type="reset" class="bg-red-600 rounded-xl p-1 px-2 text-white hover:bg-red-700" name="reset" value="Reset Details">Reset Details</button>
+                     
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <hr class=" mt-5 border-4 border-gray-300">
+
+    
+</body>
+</html>
