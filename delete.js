@@ -3,10 +3,27 @@ function deleteUser(){
 console.log(this.user);
 let userDelete1 = this.user;
 // console.log(userDelete);
-allUsersData = allUsersData.filter(user=>user.srNo!==this.user.srNo);
-console.log("data", allUsersData);
-showData();
-return allUsersData;
+
+// let delete1 = document.createElement("button");
+// delete1.name = "Delete"; delete1.value= "Delete";
+// alert("do you want to delete data" + delete1);
+
+var confirmation = confirm(" Click OK to delete data !!!");
+if (confirmation == true)
+  {
+    allUsersData = allUsersData.filter(user=>user.srNo!==this.user.srNo);
+    console.log("data", allUsersData);
+    showData();
+    return allUsersData;
+  }
+ else
+  {
+    alert("Something goes wrong!!!");
+  }
+
+
+
+
 
 // allUsersData.filter(callback(del), this.user);
 

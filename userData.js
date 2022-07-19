@@ -159,9 +159,9 @@ let srNo = 0;
         // document.getElementById('contact').value = '';
         function resetFormValues() {
             console.log("reset call");
-            document.getElementById('userName').value = " ";
-            document.getElementById('eMail').value = " ";
-            document.getElementById('contact').value = " ";
+            document.getElementById('userName').value = "";
+            document.getElementById('eMail').value = "";
+            document.getElementById('contact').value = "";
             // document.getElementById('state').value = '';
             // document.getElementById('gender').value = '';
         }
