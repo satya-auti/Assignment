@@ -8,6 +8,7 @@ function edit() {
     let updateUserName = document.getElementById("userName").value;
     let updateEmail = document.getElementById("eMail").value;
     let updateContact = document.getElementById("contact").value;
+
     
     if (this.user.srNo == updateSrNo) {
         userData = {
@@ -27,114 +28,40 @@ function edit() {
     }
 
     
+
+    
+    
+
+    
     
 }
 
-// let allUsersData = [];
-//     function userDetails() {
-//         document.getElementById('table-data').innerHTML = '';
-//         let tableHeadNames = ["Sr. No", " Name ", " Email ", " Contact ", " Update ", " Delete "];
-        
-//         let userData = {};
-//         let srNo = 1;
-
-//         let userName = document.getElementById("userName").value;
-//         let eMail = document.getElementById("eMail").value;
-//         let contact = document.getElementById("contact").value;
-
-//         let updateButton = document.createElement("button");
-//         updateButton.type = "button";
-//         updateButton.value ="Edit";
-
-//         let updateButtonName = document.createTextNode("Edit");
-//         updateButton.append(updateButtonName);
-//         updateButton.className = 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded';
-
-//         let deleteButton = document.createElement("button");
-//         deleteButton.type = "button";
-//         deleteButton.value ="Delete";
-//         deleteButton.className = 'bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded';
-
-//         let deleteButtonName = document.createTextNode("Delete");
-//         deleteButton.append(deleteButtonName);
-
-//         userData = {
-//             srNo : srNo,
-//             userName : userName,
-//             eMail : eMail,
-//             contact : contact,
-//             update : updateButton,
-//             delete : deleteButton
-//         };
-        
-//         // alert("Hello "+userName);
-//         allUsersData.push(userData);
-//         console.log(" User Data ");
-//         console.log(userData);
-//         console.log(" All User Data");
-//         console.log(allUsersData);
-//         // alert("Hii");
-        
-
-//         let table = document.createElement("table");
-//         table.className = 'border border-2';
-//         table.style.border="2";
-//         table.style="align-center";
-//         let tableRow = document.createElement("tr");
-        
-//         tableHeadNames.forEach(ele => {
-//             // let tableRow = document.createElement("tr");
-//             let tableHead = document.createElement("th");
-//             let headName = document.createTextNode(ele);
-            
-//             console.log(ele);
-//             tableHead.append(headName);
-//             tableRow.append(tableHead);
-//         });
-//         table.append(tableRow);
-        
-//         allUsersData.forEach(user => {
-//             let tableRow1 = document.createElement("tr");
-//             let tableData = document.createElement("td");
-//             // let tableDataSr = document.createTextNode(srNo);
-//             // tableData.append(tableDataSr);
-//             tableData.append(srNo);
-//             srNo++;
-//             tableRow1.append(tableData);
-
-//             let tableData1 = document.createElement("td");
-//             // let tableDataName = document.createTextNode(user.userName);
-//             // tableData1.append(tableDataName);
-//             tableData1.append(user.userName);
-//             tableRow1.append(tableData1);
-                
-//             let tableData2 = document.createElement("td");
-//             // let tableDataEmail = document.createTextNode(user.eMail);
-//             // tableData2.append(tableDataEmail);
-//             tableData2.append(user.eMail);
-//             tableRow1.append(tableData2);
-
-//             let tableData3 = document.createElement("td");
-//             // let tableDataContact = document.createTextNode(user.contact);
-//             // tableData3.append(tableDataContact);
-//             tableData3.append(user.contact);
-//             tableRow1.append(tableData3);
-
-//             let tableData4 = document.createElement("td");
-//             // let tableDataUpdate = document.createTextNode(updateButton);
-//             tableData4.append(user.update);
-//             tableRow1.append(tableData4);
-
-//             let tableData5 = document.createElement("td");
-//             // let tableDataDelete = document.createTextNode(deleteButton);
-//             tableData5.append(user.delete);
-//             tableRow1.append(tableData5);
-
-//             // tableRow1.append(tableData, tableData1, tableData2, tableData3, tableData4, tableData5);
-//             table.append(tableRow1);
-//         });
-       
-//         const allTableData = document.getElementById('table-data');
-//         allTableData.append(table);
-//         event.preventDefault(event);
-//     }
+            // isEdit=false;
+            // indexOfEdit=-1;
+            // function submitFormValues() {
+            //     console.log("Submit clicked");
+            //     const userObj = {
+            //         name: document.getElementById('name').value,
+            //         email: document.getElementById('email').value,
+            //         contact: document.getElementById('mob').value,
+            //         // state: document.getElementById('state').value,
+            //         // gender: document.getElementById('gender').value
+            //     };
+            //     if(isEdit===true){
+            //         console.log(indexOfEdit);
+            //         users[indexOfEdit]=userObj;
+            //         indexOfEdit=-1;
+            //         isEdit=false;
+            //         let b=document.getElementById('submit-button');
+            //         b.innerText='Submit';
+            //     }
+            //   else{
+            //     users.push(userObj);}
+            //     document.getElementById('name').value = '';
+            //     document.getElementById('email').value = '';
+            //     document.getElementById('mob').value = '';
+            //     // document.getElementById('state').value = '';
+            //     // document.getElementById('gender').value = '';
+            //     table.innerHTML = '';
+            //     createTable();
+            // }
