@@ -12,6 +12,9 @@
 <script src="./delete.js"></script>
 <script src="./showData.js"></script>
 <script>
+    
+
+
     // let allUsersData = [];
     // function userDetails() {
     //     document.getElementById('table-data').innerHTML = '';
@@ -167,7 +170,7 @@
                         <label class="mr-3" for="userName">Name</label>
                     </td>
                     <td>
-                        <input type="text" class="placeholder-gray-400 focus:border-red-500 rounded-md  text-center p-1 px-5 focus:ring-indigo-500 border-gray-300" name="userName" id="userName" placeholder="Name">
+                        <input type="text" class="placeholder-gray-400 focus:border-red-500 rounded-md  text-center p-1 px-5 focus:ring-indigo-500 border-gray-300" name="userName" id="userName" placeholder="Full Name" required>
                     </td>
                 </tr>
                 <tr>
@@ -175,7 +178,7 @@
                         <label class="mr-3" for="eMail">Email</label>
                     </td>
                     <td>
-                        <input type="email" class="p-1 px-5 focus:ring-sky-500 text-center rounded-md border-gray-300" name="eMail" id="eMail" placeholder="Email">
+                        <input type="email" class="p-1 px-5 focus:ring-sky-500 text-center rounded-md border-gray-300" name="eMail" id="eMail" placeholder="Email" required>
                     </td>
                 </tr>
                 <tr>
@@ -183,7 +186,7 @@
                         <label class="mr-3" for="contact">Contact</label>
                     </td>
                     <td>
-                        <input type="text" class="p-1 px-5 focus:ring-indigo-500 rounded-md text-center border-gray-300" name="contact" id="contact" placeholder="contact">
+                        <input type="text" class="p-1 px-5 focus:ring-indigo-500 rounded-md text-center border-gray-300" name="contact" id="contact" placeholder="contact" required/>
                     </td>
                 </tr>
                 <tr>
@@ -192,8 +195,8 @@
                     </td>
                     <td class="pt-2">
                         
-                        <button type="submit" onclick="userDetails()" class="bg-green-600 rounded-xl p-1 px-2 text-white hover:bg-green-700" name="submit" value="Save Details">Save Details</button>
-                        <button type="reset" class="bg-red-600 rounded-xl p-1 px-2 text-white hover:bg-red-700" name="reset" value="Reset Details">Reset Details</button>
+                        <button type="submit" id="submit" onclick="userDetails()" class="bg-green-600 rounded-xl p-1 px-2 text-white hover:bg-green-700" name="submit" value="Save Details">Save Details</button>
+                        <button type="reset" class="bg-red-600 rounded-xl p-1 px-2 text-white hover:bg-red-700" id="reset" name="reset" value="Reset Details">Reset Details</button>
                      
                         
                     </td>

@@ -6,6 +6,8 @@ let srNo = 0;
         let tableHeadNames = ["Sr. No", " Name ", " Email ", " Contact ", " Update ", " Delete "];
         srNo++;
         let userData = {};
+        isEdit=false;
+        indexOfEdit=-1;
 
         let userName = document.getElementById("userName").value;
         let eMail = document.getElementById("eMail").value;
@@ -38,11 +40,31 @@ let srNo = 0;
         };
         
         // alert("Hello "+userName);
-        allUsersData.push(userData);
+        // allUsersData.push(userData);
         console.log(" User Data ");
         console.log(userData);
         console.log(" All User Data");
         console.log(allUsersData);
+
+        if(isEdit===true){
+            console.log(indexOfEdit);
+            allUsersData[indexOfEdit]=userData;
+            indexOfEdit=-1;
+            isEdit=false;
+            let b=document.getElementById('submit');
+            b.innerText='Submit';
+        }
+        else{
+        allUsersData.push(userData);
+        }
+        document.getElementById('userName').value = '';
+        document.getElementById('eMail').value = '';
+        document.getElementById('contact').value = '';
+        // document.getElementById('state').value = '';
+        // document.getElementById('gender').value = '';
+        // table.innerHTML = '';
+        showData();
+    
         // alert("Hii");
         
 
@@ -159,9 +181,9 @@ let srNo = 0;
         // document.getElementById('contact').value = '';
         function resetFormValues() {
             console.log("reset call");
-            document.getElementById('userName').value = " ";
-            document.getElementById('eMail').value = " ";
-            document.getElementById('contact').value = " ";
+            document.getElementById('userName').value = "";
+            document.getElementById('eMail').value = "";
+            document.getElementById('contact').value = "";
             // document.getElementById('state').value = '';
             // document.getElementById('gender').value = '';
         }
