@@ -8,6 +8,7 @@ function edit() {
     let updateUserName = document.getElementById("userName").value;
     let updateEmail = document.getElementById("eMail").value;
     let updateContact = document.getElementById("contact").value;
+
     
     if (this.user.srNo == updateSrNo) {
         userData = {
@@ -25,6 +26,11 @@ function edit() {
         console.log(userData);
         showData();
     }
+
+    
+
+    
+    
 
     
     
